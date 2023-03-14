@@ -4,7 +4,7 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { UserEntity } from './user.entity';
+import { UserEntity } from './entities/user.entity';
 import { UserService } from './user.service';
 
 const userEntityList: UserEntity[] = [
@@ -175,7 +175,6 @@ describe('UserService', () => {
       //Arrange
       const body: UpdateUserDto = {
         name: 'user',
-        email: 'user1@email.com',
       };
 
       //Act
@@ -191,7 +190,6 @@ describe('UserService', () => {
       //Arrange
       const body: UpdateUserDto = {
         name: 'user',
-        email: 'user1@email.com',
       };
 
       //Arrange

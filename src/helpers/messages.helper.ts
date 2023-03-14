@@ -7,4 +7,13 @@ export const MessagesHelper = {
   EMAIL_REQUIRED: 'Informe um endereço de email',
   EMAIL_INVALID: 'Informe um endereço de email válido',
   EMAIL_DUPLICATE: 'Email já cadastrado',
+  CNPJ_LENGTH: 'CNPJ deve ter 14 dígitos',
+  CNPJ_REQUIRED: 'Informe o CNPJ',
+  WEBSITE_REQUIRED: 'Informe o Website',
+  CEP_REQUIRED: 'Informe o CEP',
+  ADDRESS_REQUIRED: 'Informe o endereço',
+  NEIGHBORHOOD_REQUIRED: 'Informe o bairro',
+  CITY_REQUIRED: 'Informe a cidade',
+  STATE_REQUIRED: 'Informe o estado',
+  COMPANY_REQUIRED: 'Informe a empresa',
 };

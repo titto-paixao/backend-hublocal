@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UserEntity } from 'src/app/user/user.entity';
+import { UserEntity } from 'src/app/user/entities/user.entity';
 import { AuthService } from './auth.service';
 
 const returnLogin = {

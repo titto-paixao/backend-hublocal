@@ -6,8 +6,10 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
 import { hashSync } from 'bcrypt';
+import { CompanyEntity } from 'src/app/company/entities/company.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -22,6 +24,9 @@ export class UserEntity {
 
   @Column()
   password: string;
+
+  @OneToMany(() => CompanyEntity, (company) => company.user)
+  companies: CompanyEntity[];
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: string;

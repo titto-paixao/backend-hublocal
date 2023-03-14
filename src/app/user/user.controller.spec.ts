@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserController } from './user.controller';
-import { UserEntity } from './user.entity';
+import { UserEntity } from './entities/user.entity';
 import { UserService } from './user.service';
 
 const userEntityList: UserEntity[] = [
@@ -135,7 +135,6 @@ describe('UserController', () => {
       //Arrange
       const body: UpdateUserDto = {
         name: 'user',
-        email: 'user@email.com',
       };
       //Act
       const result = await userController.update('1', body);
@@ -150,7 +149,6 @@ describe('UserController', () => {
       //Arrange
       const body: UpdateUserDto = {
         name: 'user',
-        email: 'user@email.com',
       };
       //Arrange
       jest.spyOn(userService, 'update').mockRejectedValueOnce(new Error());

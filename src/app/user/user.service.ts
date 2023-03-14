@@ -9,7 +9,7 @@ import { MessagesHelper } from 'src/helpers/messages.helper';
 import { FindOneOptions, Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { UserEntity } from './user.entity';
+import { UserEntity } from './entities/user.entity';
 
 @Injectable()
 export class UserService {
